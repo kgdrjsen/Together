@@ -1,9 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Together" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Together" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.Together" parent="Base.Theme.Together" />
+
+    <style name="text16">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="text16.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text20">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="text20.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
