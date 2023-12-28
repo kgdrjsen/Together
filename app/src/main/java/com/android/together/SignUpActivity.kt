@@ -1,6 +1,8 @@
 package com.android.together
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -11,6 +13,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import com.android.together.User.id
 import com.android.together.User.name
 import com.android.together.User.nickName
@@ -26,6 +29,7 @@ class SignUpActivity : AppCompatActivity() {
 
         val ig_add : ImageView = findViewById(R.id.ig_add)
         val tv_pass_check : TextView = findViewById(R.id.tv_pass_check)
+        val tv_name_check : TextView = findViewById(R.id.tv_name_check)
         val signup_et1 : EditText = findViewById(R.id.signup_et1)
         val signup_et2 : EditText = findViewById(R.id.signup_et2)
         val signup_et3 : EditText = findViewById(R.id.signup_et3)
@@ -43,14 +47,38 @@ class SignUpActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.none, R.anim.horizon_exit)
         }
 
+        //이름 유효성 검사 (특정조건 :
+        signup_et1.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
-        // 닉네임 길이확인
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if (signup_et1.text.length <= 4) {
+                    tv_name_check.setText("사용가능합니다")
+                    tv_name_check.setTextColor(Color.GRAY) // 안드로이드 내의 기본색깔 지정할 경우
+                    btn_signup2.isEnabled=true
+                } else {
+                    tv_name_check.setText("이름은 최대 4글자 입니다")
+                    tv_name_check.setTextColor(ContextCompat.getColor(applicationContext,R.color.red)) //value 내의 color에서 지정할 경우
+                    btn_signup2.isEnabled=false
+                }
+            }
+
+        })
+
+        // 닉네임 중복확인
         btn_signup_check1.setOnClickListener {
-            if(signup_et2.text.length<3 || signup_et2.text.length>8 ){
-                Toast.makeText(this,"닉네임은 3자리 이상 8자리 이하로 입력해주세요",Toast.LENGTH_LONG).show()
+            if(signup_et2.text.toString()=="스파르타" || signup_et2.text.toString()=="코딩클럽" || signup_et2.text.toString()=="일석이조"
+                || signup_et2.text.toString()=="밥묵자" || signup_et2.text.toString()=="물론" || signup_et2.text.toString()=="2조"){
+                Toast.makeText(this,"이미 있는 닉네임 입니다",Toast.LENGTH_LONG).show()
                 btn_signup2.isEnabled=false
             } else {
-                Toast.makeText(this,"사용가능합니다.",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"사용가능합니다",Toast.LENGTH_SHORT).show()
                 btn_signup2.isEnabled=true
             }
         }
@@ -62,12 +90,46 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this,"id는 3자리 이상 8자리 이하로 입력해주세요",Toast.LENGTH_LONG).show()
                 btn_signup2.isEnabled=false
             } else {
-                Toast.makeText(this,"사용가능합니다.",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"사용가능합니다",Toast.LENGTH_SHORT).show()
                 btn_signup2.isEnabled=true
             }
         }
 
-        // 비밀번호 유효성 검사
+
+        // 비밀번호 유효성 검사 (일치여부)
+        signup_et4.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(signup_et4.text.toString().equals(signup_et5.text.toString())){
+                    tv_pass_check.setText("비밀번호가 일치합니다.")
+                    tv_pass_check.setTextColor(Color.GRAY)
+                    btn_signup2.isEnabled=true
+                } else {
+                    tv_pass_check.setText("비밀번호가 일치하지 않습니다.")
+                    tv_pass_check.setTextColor(Color.RED)
+                    btn_signup2.isEnabled=false
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if(signup_et4.text.toString().equals(signup_et5.text.toString())){
+                    tv_pass_check.setText("비밀번호가 일치합니다.")
+                    tv_pass_check.setTextColor(Color.GRAY)
+                    btn_signup2.isEnabled=true
+                } else {
+                    tv_pass_check.setText("비밀번호가 일치하지 않습니다.")
+                    tv_pass_check.setTextColor(Color.RED)
+                    btn_signup2.isEnabled=false
+                }
+            }
+
+        })
+
+
+        // 비밀번호 유효성 검사 (일치여부)
         signup_et5.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -76,10 +138,11 @@ class SignUpActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if(signup_et4.text.toString().equals(signup_et5.text.toString())){
                     tv_pass_check.setText("비밀번호가 일치합니다.")
+                    tv_pass_check.setTextColor(Color.GRAY)
                     btn_signup2.isEnabled=true
                 } else {
-                    tv_pass_check.setTextColor(R.color.red)
                     tv_pass_check.setText("비밀번호가 일치하지 않습니다.")
+                    tv_pass_check.setTextColor(Color.RED)
                     btn_signup2.isEnabled=false
                 }
             }
@@ -87,10 +150,11 @@ class SignUpActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 if(signup_et4.text.toString().equals(signup_et5.text.toString())){
                     tv_pass_check.setText("비밀번호가 일치합니다.")
+                    tv_pass_check.setTextColor(Color.GRAY)
                     btn_signup2.isEnabled=true
                 } else {
-                    tv_pass_check.setTextColor(R.color.red)
                     tv_pass_check.setText("비밀번호가 일치하지 않습니다.")
+                    tv_pass_check.setTextColor(Color.RED)
                     btn_signup2.isEnabled=false
                 }
             }

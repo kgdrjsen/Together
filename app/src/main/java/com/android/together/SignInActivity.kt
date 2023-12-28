@@ -1,8 +1,11 @@
 package com.android.together
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -21,6 +24,7 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         val signin_ig : ImageView = findViewById(R.id.signin_ig)
+        val tv_id_check : TextView = findViewById(R.id.tv_id_check)
         val signin_et1 : EditText = findViewById(R.id.signin_et1)
         val signin_et2 : EditText =  findViewById(R.id.signin_et2)
         val btn_signin : Button = findViewById(R.id.btn_signin)
@@ -45,6 +49,30 @@ class SignInActivity : AppCompatActivity() {
 
             }
         }
+
+        //로그인 유효성검사(3자리 이상 8자리 이하)
+        signin_et1.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if(signin_et1.text.length<3 || signin_et1.text.length>8) {
+                    tv_id_check.setText("id는 3자리 이상 8자리 이하로 입력해주세요")
+                    tv_id_check.setTextColor(Color.RED)
+                    btn_signin.isEnabled=false
+                } else {
+                    tv_id_check.setText("사용가능합니다")
+                    tv_id_check.setTextColor(Color.GRAY)
+                    btn_signin.isEnabled=true
+                }
+            }
+
+        })
 
 
         // 회원가입 버튼
