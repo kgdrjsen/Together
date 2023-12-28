@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Together</string>
+    <string name="id">ID</string>
+    <string name="pw">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="log_out">Log Out</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="back">Back</string>
+    <string name="name">Name</string>
+    <string name="nick_name">NickName</string>
+    <string name="pw_check">Password Check</string>
+    <string name="check">Check</string>
+    <string name="my_page">Mypage</string>
+    <string name="edit_hint">Please fill in the blank</string>
+    <string name="id_condition">Please enter the ID with at least 3 but not more than 8 characters</string>
+    <string name="ok">It\'s possible to use</string>
+    <string name="name_condition">" Name can be up to 4 characters long"</string>
+    <string name="nickname_condition">The nickname already exists</string>
+    <string name="pass_same">"Your password matches "</string>
+    <string name="pass_discord">Your Passwords do not match</string>
+</resources>

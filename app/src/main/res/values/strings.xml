@@ -12,4 +12,22 @@
     <string name="check">중복확인</string>
     <string name="my_page">마이페이지</string>
     <string name="edit_hint">빈칸을 입력해주세요</string>
+
+
+
+
+
+
+
+
+
+
+
+    <string name="id_condition">id는 3자리 이상 8자리 이하로 입력해주세요</string>
+    <string name="ok">사용가능합니다</string>
+    <string name="name_condition">이름은 최대 4글자 입니다</string>
+    <string name="nickname_condition">이미 있는 닉네임 입니다</string>
+    <string name="pass_same">비밀번호가 일치합니다</string>
+    <string name="pass_discord">비밀번호가 일치하지 않습니다</string>
+
 </resources>

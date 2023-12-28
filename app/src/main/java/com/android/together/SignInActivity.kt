@@ -62,11 +62,11 @@ class SignInActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {
                 if(signin_et1.text.length<3 || signin_et1.text.length>8) {
-                    tv_id_check.setText("id는 3자리 이상 8자리 이하로 입력해주세요")
+                    tv_id_check.setText(getString(R.string.id_condition))
                     tv_id_check.setTextColor(Color.RED)
                     btn_signin.isEnabled=false
                 } else {
-                    tv_id_check.setText("사용가능합니다")
+                    tv_id_check.setText(getString(R.string.ok))
                     tv_id_check.setTextColor(Color.GRAY)
                     btn_signin.isEnabled=true
                 }
