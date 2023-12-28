@@ -211,7 +211,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_radius30"
+        android:background="@drawable/selector_btn_grey"
         android:text="@string/sign_up"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

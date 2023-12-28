@@ -47,7 +47,7 @@ class SignUpActivity : AppCompatActivity() {
         // 닉네임 길이확인
         btn_signup_check1.setOnClickListener {
             if(signup_et2.text.length<3 || signup_et2.text.length>8 ){
-                Toast.makeText(this,"닉네임은 3자리 이상 8자리 이하로 입력해주세요",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"닉네임은 3자리 이상 8자리 이하로 입력해주세요",Toast.LENGTH_LONG).show()
                 btn_signup2.isEnabled=false
             } else {
                 Toast.makeText(this,"사용가능합니다.",Toast.LENGTH_SHORT).show()
@@ -59,7 +59,7 @@ class SignUpActivity : AppCompatActivity() {
         // 아이디 길이확인
         btn_signup_check2.setOnClickListener {
             if(signup_et3.text.length<3 || signup_et3.text.length>8 ){
-                Toast.makeText(this,"id는 3자리 이상 8자리 이하로 입력해주세요",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"id는 3자리 이상 8자리 이하로 입력해주세요",Toast.LENGTH_LONG).show()
                 btn_signup2.isEnabled=false
             } else {
                 Toast.makeText(this,"사용가능합니다.",Toast.LENGTH_SHORT).show()
