@@ -7,6 +7,7 @@ android {
     namespace = "com.android.together"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.android.together"
         minSdk = 28
