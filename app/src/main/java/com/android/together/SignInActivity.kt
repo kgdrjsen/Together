@@ -110,6 +110,5 @@ class SignInActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         Log.d("SignInActivity","user name : ${User.name}")
-        Log.d("SignInActivity","user Image : ${User.profile}")
     }
 }

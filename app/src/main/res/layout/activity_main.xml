@@ -95,14 +95,14 @@
         android:id="@+id/lay_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <ScrollView
             android:id="@+id/scroll_view"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="600dp"
             android:fillViewport="true">
 
             <LinearLayout
@@ -115,40 +115,59 @@
                     android:id="@+id/btn_content1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_selector">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/txt_id1"
-                        style="@style/text16"
+                        style="@style/text16.Bold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:paddingStart="20dp"
                         android:paddingEnd="20dp"
                         android:text="풋볼조아"
+                        android:layout_marginTop="10dp"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/iv_img1"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="20dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/futsal3"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/futsal1"
                         android:layout_marginTop="10dp"
                         app:layout_constraintTop_toBottomOf="@+id/txt_id1" />
 
                     <TextView
-                        android:id="@+id/txt_content1"
-                        style="@style/text16"
-                        android:layout_width="match_parent"
+                        android:id="@+id/txt_title1"
+                        style="@style/text16.Bold"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="제목 : 주말에 같이 풋살 하실 분들 모집합니다. \n일시 : 2023년 12월 30일 오후 2시 \n내용 : 주말동안 날씨도 좋고 연말 모임이 없는 한가한 분들 구합니다. \n연말을 뛰면서 재밌게 보내보아요."
-                        android:maxLines="2"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
                         android:ellipsize="end"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_img1" />
+                        android:maxLines="1"
+                        android:text="제목입니다"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_img1"/>
+
+                    <TextView
+                        android:id="@+id/txt_content1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_title1"/>
 
                     <TextView
                         android:id="@+id/txt_more1"
@@ -171,6 +190,61 @@
                         android:paddingEnd="20dp"
                         android:paddingBottom="20dp"/>
 
+                    <LinearLayout
+                        android:id="@+id/post_info1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_more1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_location1"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/post_location_text1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_location1"
+                            app:layout_constraintStart_toEndOf="@id/post_location1"
+                            app:layout_constraintTop_toTopOf="@id/post_location1" />
+
+                        <ImageView
+                            android:id="@+id/post_calendar1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintTop_toBottomOf="@id/txt_more1" />
+
+                        <TextView
+                            android:id="@+id/post_calendar_text1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_calendar1"
+                            app:layout_constraintStart_toEndOf="@id/post_calendar1"
+                            app:layout_constraintTop_toTopOf="@id/post_calendar1" />
+
+                    </LinearLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -178,40 +252,59 @@
                     android:id="@+id/btn_content2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_selector">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/txt_id2"
-                        style="@style/text16"
+                        style="@style/text16.Bold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:paddingStart="20dp"
                         android:paddingEnd="20dp"
-                        android:text="jusiuooo"
+                        android:text="풋볼조아"
+                        android:layout_marginTop="10dp"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/iv_img2"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="20dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/jukseoru1"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/futsal1"
                         android:layout_marginTop="10dp"
                         app:layout_constraintTop_toBottomOf="@+id/txt_id2" />
 
                     <TextView
-                        android:id="@+id/txt_content2"
-                        style="@style/text16"
-                        android:layout_width="match_parent"
+                        android:id="@+id/txt_title2"
+                        style="@style/text16.Bold"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="제목 : 이번에 국보로 승격한 죽서루 주변 환경 미화 알바 모집 \n일시 : 2023년 12월 31일 일요일 오전 9시 ~ 오후 4시까지 \n시급 : 12000원 \n내용 : 이번에 국보 제 213호에서 국보로 승격하여 강원도 관동팔경 중에서는 유일하게 국보로 등극하였고, \n강원도 13번째 국보가 되었습니다. 따라서 올해가 가기 전 새로운 마음으로 \n깨끗한 국보를 보고 싶으신 분들 많은 신청 부탁드립니다."
-                        android:maxLines="2"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
                         android:ellipsize="end"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_img2" />
+                        android:maxLines="1"
+                        android:text="제목입니다"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_img2"/>
+
+                    <TextView
+                        android:id="@+id/txt_content2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_title2"/>
 
                     <TextView
                         android:id="@+id/txt_more2"
@@ -234,6 +327,61 @@
                         android:paddingEnd="20dp"
                         android:paddingBottom="20dp"/>
 
+                    <LinearLayout
+                        android:id="@+id/post_info2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_more2"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_location2"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/post_location_text2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_location2"
+                            app:layout_constraintStart_toEndOf="@id/post_location2"
+                            app:layout_constraintTop_toTopOf="@id/post_location2" />
+
+                        <ImageView
+                            android:id="@+id/post_calendar2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintTop_toBottomOf="@id/txt_more2" />
+
+                        <TextView
+                            android:id="@+id/post_calendar_text2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_calendar2"
+                            app:layout_constraintStart_toEndOf="@id/post_calendar2"
+                            app:layout_constraintTop_toTopOf="@id/post_calendar2" />
+
+                    </LinearLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -241,41 +389,59 @@
                     android:id="@+id/btn_content3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_selector">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/txt_id3"
-                        style="@style/text16"
+                        style="@style/text16.Bold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:paddingStart="20dp"
                         android:paddingEnd="20dp"
-                        android:text="코피나와브런트"
+                        android:text="풋볼조아"
+                        android:layout_marginTop="10dp"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/iv_img3"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="20dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/basketball1"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/futsal1"
                         android:layout_marginTop="10dp"
                         app:layout_constraintTop_toBottomOf="@+id/txt_id3" />
 
                     <TextView
-                        android:id="@+id/txt_content3"
-                        style="@style/text16"
-                        android:layout_width="match_parent"
+                        android:id="@+id/txt_title3"
+                        style="@style/text16.Bold"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:padding="20dp"
-                        android:text="제목 : 주말에 같이 농구 하실 분들 모집합니다. \n일시 : 2023년 12월 31일 오후 3시 \n내용 : 주말동안 날씨도 좋고 연말 모임이 없는 한가한 분들 구합니다. \n현재 4명 있는데 3:3 반 코트나 5:5 풀 코트 하고 싶으셨지만 주변에서 \n사람을 구하기 어려워서 못 하셨던 초보,고수 분들 상관없이 자주 모여서 하실 분들이었으면 좋겠습니다.  \n연말을 뛰면서 재밌게 보내보아요."
-                        android:maxLines="2"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
                         android:ellipsize="end"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_img3" />
+                        android:maxLines="1"
+                        android:text="제목입니다"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_img3"/>
+
+                    <TextView
+                        android:id="@+id/txt_content3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_title3"/>
 
                     <TextView
                         android:id="@+id/txt_more3"
@@ -298,47 +464,120 @@
                         android:paddingEnd="20dp"
                         android:paddingBottom="20dp"/>
 
+                    <LinearLayout
+                        android:id="@+id/post_info3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_more3"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_location3"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/post_location_text3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_location3"
+                            app:layout_constraintStart_toEndOf="@id/post_location3"
+                            app:layout_constraintTop_toTopOf="@id/post_location3" />
+
+                        <ImageView
+                            android:id="@+id/post_calendar3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintTop_toBottomOf="@id/txt_more3" />
+
+                        <TextView
+                            android:id="@+id/post_calendar_text3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_calendar3"
+                            app:layout_constraintStart_toEndOf="@id/post_calendar3"
+                            app:layout_constraintTop_toTopOf="@id/post_calendar3" />
+
+                    </LinearLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btn_content4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_selector">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/txt_id4"
-                        style="@style/text16"
+                        style="@style/text16.Bold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:paddingStart="20dp"
                         android:paddingEnd="20dp"
-                        android:text="작은사랑봉사단"
+                        android:text="풋볼조아"
+                        android:layout_marginTop="10dp"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/iv_img4"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="20dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/coal2"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/futsal1"
                         android:layout_marginTop="10dp"
                         app:layout_constraintTop_toBottomOf="@+id/txt_id4" />
 
                     <TextView
-                        android:id="@+id/txt_content4"
-                        style="@style/text16"
-                        android:layout_width="match_parent"
+                        android:id="@+id/txt_title4"
+                        style="@style/text16.Bold"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:padding="20dp"
-                        android:text="제목 : 사랑의 연탄 나르기 봉사 활동 \n일시 : 2023년 12월 31일 일요일 오전 10시  \n내용 : 올해에도 돌아온 연탄 나르기 봉사 활동! \n저희 작은사랑과 함께 올해 한파를 힘겹게 이겨내고 계시는 분들께 \n뜨거운 사랑을 같이 나누어 주실 분들을 모집합니다."
-                        android:maxLines="2"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
                         android:ellipsize="end"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_img4" />
+                        android:maxLines="1"
+                        android:text="제목입니다"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_img4"/>
+
+                    <TextView
+                        android:id="@+id/txt_content4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_title4"/>
 
                     <TextView
                         android:id="@+id/txt_more4"
@@ -361,47 +600,120 @@
                         android:paddingEnd="20dp"
                         android:paddingBottom="20dp"/>
 
+                    <LinearLayout
+                        android:id="@+id/post_info4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_more4"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_location4"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/post_location_text4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_location4"
+                            app:layout_constraintStart_toEndOf="@id/post_location4"
+                            app:layout_constraintTop_toTopOf="@id/post_location4" />
+
+                        <ImageView
+                            android:id="@+id/post_calendar4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintTop_toBottomOf="@id/txt_more4" />
+
+                        <TextView
+                            android:id="@+id/post_calendar_text4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_calendar4"
+                            app:layout_constraintStart_toEndOf="@id/post_calendar4"
+                            app:layout_constraintTop_toTopOf="@id/post_calendar4" />
+
+                    </LinearLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btn_content5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_selector">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/txt_id5"
-                        style="@style/text16"
+                        style="@style/text16.Bold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:paddingStart="20dp"
                         android:paddingEnd="20dp"
-                        android:text="작성자 아이디"
+                        android:text="풋볼조아"
+                        android:layout_marginTop="10dp"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/iv_img5"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="20dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_lotto"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/futsal1"
                         android:layout_marginTop="10dp"
                         app:layout_constraintTop_toBottomOf="@+id/txt_id5" />
 
                     <TextView
-                        android:id="@+id/txt_content5"
-                        style="@style/text16"
-                        android:layout_width="match_parent"
+                        android:id="@+id/txt_title5"
+                        style="@style/text16.Bold"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:padding="20dp"
-                        android:text="내용"
-                        android:maxLines="2"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
                         android:ellipsize="end"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_img5" />
+                        android:maxLines="1"
+                        android:text="제목입니다"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_img5"/>
+
+                    <TextView
+                        android:id="@+id/txt_content5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_title5"/>
 
                     <TextView
                         android:id="@+id/txt_more5"
@@ -424,7 +736,473 @@
                         android:paddingEnd="20dp"
                         android:paddingBottom="20dp"/>
 
+                    <LinearLayout
+                        android:id="@+id/post_info5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_more5"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_location5"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/post_location_text5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_location5"
+                            app:layout_constraintStart_toEndOf="@id/post_location5"
+                            app:layout_constraintTop_toTopOf="@id/post_location5" />
+
+                        <ImageView
+                            android:id="@+id/post_calendar5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintTop_toBottomOf="@id/txt_more5" />
+
+                        <TextView
+                            android:id="@+id/post_calendar_text5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_calendar5"
+                            app:layout_constraintStart_toEndOf="@id/post_calendar5"
+                            app:layout_constraintTop_toTopOf="@id/post_calendar5" />
+
+                    </LinearLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_content6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/txt_id6"
+                        style="@style/text16.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="풋볼조아"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_img6"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/futsal1"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_id6" />
+
+                    <TextView
+                        android:id="@+id/txt_title6"
+                        style="@style/text16.Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="제목입니다"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_img6"/>
+
+                    <TextView
+                        android:id="@+id/txt_content6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_title6"/>
+
+                    <TextView
+                        android:id="@+id/txt_more6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="더보기"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_content6"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="20dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_less6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="접기"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_content6"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="20dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/post_info6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_more6"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_location6"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/post_location_text6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_location6"
+                            app:layout_constraintStart_toEndOf="@id/post_location6"
+                            app:layout_constraintTop_toTopOf="@id/post_location6" />
+
+                        <ImageView
+                            android:id="@+id/post_calendar6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintTop_toBottomOf="@id/txt_more6" />
+
+                        <TextView
+                            android:id="@+id/post_calendar_text6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_calendar6"
+                            app:layout_constraintStart_toEndOf="@id/post_calendar6"
+                            app:layout_constraintTop_toTopOf="@id/post_calendar6" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_content7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/txt_id7"
+                        style="@style/text16.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="풋볼조아"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_img7"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/futsal1"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_id7" />
+
+                    <TextView
+                        android:id="@+id/txt_title7"
+                        style="@style/text16.Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="제목입니다"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_img7"/>
+
+                    <TextView
+                        android:id="@+id/txt_content7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_title7"/>
+
+                    <TextView
+                        android:id="@+id/txt_more7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="더보기"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_content7"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="20dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_less7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="접기"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_content7"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="20dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/post_info7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_more7"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_location7"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/post_location_text7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_location7"
+                            app:layout_constraintStart_toEndOf="@id/post_location7"
+                            app:layout_constraintTop_toTopOf="@id/post_location7" />
+
+                        <ImageView
+                            android:id="@+id/post_calendar7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintTop_toBottomOf="@id/txt_more7" />
+
+                        <TextView
+                            android:id="@+id/post_calendar_text7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_calendar7"
+                            app:layout_constraintStart_toEndOf="@id/post_calendar7"
+                            app:layout_constraintTop_toTopOf="@id/post_calendar7" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_content8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/txt_id8"
+                        style="@style/text16.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="풋볼조아"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_img8"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/futsal1"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_id8" />
+
+                    <TextView
+                        android:id="@+id/txt_title8"
+                        style="@style/text16.Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="제목입니다"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_img8"/>
+
+                    <TextView
+                        android:id="@+id/txt_content8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_title8"/>
+
+                    <TextView
+                        android:id="@+id/txt_more8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="더보기"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_content8"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="20dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_less8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="접기"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_content8"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="20dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/post_info8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_more8"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_location8"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/post_location_text8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_location8"
+                            app:layout_constraintStart_toEndOf="@id/post_location8"
+                            app:layout_constraintTop_toTopOf="@id/post_location8" />
+
+                        <ImageView
+                            android:id="@+id/post_calendar8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintTop_toBottomOf="@id/txt_more8" />
+
+                        <TextView
+                            android:id="@+id/post_calendar_text8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="미정"
+                            app:layout_constraintBottom_toBottomOf="@id/post_calendar8"
+                            app:layout_constraintStart_toEndOf="@id/post_calendar8"
+                            app:layout_constraintTop_toTopOf="@id/post_calendar8" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
             </LinearLayout>
