@@ -133,7 +133,7 @@
                     android:layout_marginEnd="6dp"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="수원쪽에서 풋살 같이하실 두 분 구합니다~ "
+                    android:text="@string/mypage_post1_title"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +147,7 @@
                     android:layout_marginEnd="6dp"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:text="실력에 상관없이 재밌고 매너있게 차실 분 구합니다~! 누구든지 연락주세요~"
+                    android:text="@string/mypage_post1_contents"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/post_title1"
                     app:layout_constraintTop_toBottomOf="@id/post_title1" />
@@ -199,7 +199,7 @@
                         android:layout_weight="4"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="수원역 1번출구" />
+                        android:text="@string/mypage_post1_location" />
 
                     <ImageView
                         android:id="@+id/post_calendar1"
@@ -217,7 +217,7 @@
                         android:layout_weight="4"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="5일 오후 12시 ~ 오후 2시" />
+                        android:text="@string/mypage_post1_date" />
 
                 </LinearLayout>
 
@@ -253,7 +253,7 @@
                     android:layout_marginEnd="6dp"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="알고리즘 기초부터 같이 공부 할 분들 찾습니다!!!"
+                    android:text="@string/mypage_post2_title"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -268,8 +268,7 @@
                     android:layout_marginEnd="6dp"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:text="알고리즘 기초부터 탄탄히 다져나갈 분들 찾습니다!! 3명정도 구해보려고 합니다!
-장소와 시간은 추후에 다 같이 결정할 생각입니다! 같이 끈기있게 공부하실 분든 연락주세요!!"
+                    android:text="@string/mypage_post2_contents"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/post_title2"
                     app:layout_constraintTop_toBottomOf="@id/post_title2" />
@@ -321,7 +320,7 @@
                         android:layout_weight="4"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="미정" />
+                        android:text="@string/mypage_post2_location" />
 
                     <ImageView
                         android:id="@+id/post_calendar2"
@@ -339,7 +338,7 @@
                         android:layout_weight="4"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="미정" />
+                        android:text="@string/mypage_post2_date" />
 
                 </LinearLayout>
 
@@ -375,7 +374,7 @@
                     android:layout_marginEnd="6dp"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="안드로이드 토이 프로젝트 같이 진행하실 서버분 구합니다!!"
+                    android:text="@string/mypage_post3_title"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -390,7 +389,7 @@
                     android:layout_marginEnd="6dp"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:text="안드로이드 토이 프로젝트를 아이디어부터 배포까지 같이 달려보실 서버분 구합니다!!"
+                    android:text="@string/mypage_post3_contents"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/post_title3"
                     app:layout_constraintTop_toBottomOf="@id/post_title3" />
@@ -442,7 +441,7 @@
                         android:layout_weight="4"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="온라인 회의" />
+                        android:text="@string/mypage_post3_location" />
 
                     <ImageView
                         android:id="@+id/post_calendar3"
@@ -460,7 +459,7 @@
                         android:layout_weight="4"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="미정" />
+                        android:text="@string/mypage_post3_date" />
 
                 </LinearLayout>
 
@@ -496,7 +495,7 @@
                     android:layout_marginEnd="6dp"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="수원역에서 풋살 같이하실 분 구합니다~ "
+                    android:text="@string/mypage_post4_title"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -511,7 +510,7 @@
                     android:layout_marginEnd="6dp"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:text="실력에 상관없이 재밌고 매너있게 차실 분 구합니다~! 누구든지 연락주세요~"
+                    android:text="@string/mypage_post4_contents"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/post_title4"
                     app:layout_constraintTop_toBottomOf="@id/post_title4" />
@@ -563,7 +562,7 @@
                         android:layout_weight="4"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="수원역 1번출구" />
+                        android:text="@string/mypage_post4_location" />
 
                     <ImageView
                         android:id="@+id/post_calendar4"
@@ -581,7 +580,7 @@
                         android:layout_weight="4"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="22일 오후 6시 ~ 오후 8시" />
+                        android:text="@string/mypage_post4_date" />
 
                 </LinearLayout>
 
