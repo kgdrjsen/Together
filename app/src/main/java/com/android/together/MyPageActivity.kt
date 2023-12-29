@@ -1,5 +1,7 @@
 package com.android.together
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -32,11 +34,13 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
+        initView()
         initEdit()
         initPostList()
     }
 
     private fun initView() {
+        userImage.setImageURI(Uri.parse(User.profile))
         userName.text = User.name
         userNickName.text = User.nickName
     }
@@ -54,8 +58,10 @@ class MyPageActivity : AppCompatActivity() {
     private fun initPostList() {
         val postAdapter = PostListAdapter(this@MyPageActivity, PostList.postList)
         postList.adapter = postAdapter
-        postList.setOnItemClickListener { _, _, i, _ ->
-            Log.d("PostList","${PostList.postList[i]}")
+        postList.setOnItemClickListener { _, _, index, _ ->
+            val intent = Intent(this@MyPageActivity, DetailActivity::class.java)
+            intent.putExtra(Contants.POST_NUMBER, index)
+            startActivity(intent)
         }
     }
 }
