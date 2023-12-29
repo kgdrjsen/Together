@@ -12,14 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Together"
         tools:targetApi="31">
+
         <activity
-            android:name=".DetailActivity"/>
+            android:name=".MyPageActivity"
+            android:exported="false" />
+        <activity android:name=".DetailActivity" />
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
             android:exported="false"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
