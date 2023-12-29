@@ -1,5 +1,7 @@
 package com.android.together
 
+import android.net.Uri
+
 object User {
     var name: String = ""
     var nickName: String = ""
