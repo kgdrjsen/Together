@@ -29,6 +29,7 @@ class SignUpActivity : AppCompatActivity() {
 
         val ig_add : ImageView = findViewById(R.id.ig_add)
         val tv_pass_check : TextView = findViewById(R.id.tv_pass_check)
+        val tv_pass_check2 : TextView = findViewById(R.id.tv_pass_check2)
         val tv_name_check : TextView = findViewById(R.id.tv_name_check)
         val signup_et1 : EditText = findViewById(R.id.signup_et1)
         val signup_et2 : EditText = findViewById(R.id.signup_et2)
@@ -125,7 +126,6 @@ class SignUpActivity : AppCompatActivity() {
                     btn_signup2.isEnabled=false
                 }
             }
-
         })
 
 
@@ -178,7 +178,7 @@ class SignUpActivity : AppCompatActivity() {
 
             // 모든 액티비티에 접근 가능하도록
             User.addUser("${signup_et1.text}","${signup_et2.text}","${signup_et3.text}","${signup_et4.text}",
-                imageUri
+                "imageUri"
             )
 
             setResult(RESULT_OK,intent)
