@@ -13,13 +13,12 @@
         android:theme="@style/Theme.Together"
         tools:targetApi="31">
         <activity
-            android:name=".DetailPageActivity"
-            android:exported="false" />
+            android:name=".MyPageActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".DetailActivity" />
         <activity
             android:name=".SignUpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MyPageActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
@@ -32,6 +31,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
