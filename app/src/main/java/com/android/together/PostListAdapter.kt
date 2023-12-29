@@ -32,6 +32,7 @@ class PostListAdapter(private val context: Context, private val postList: Mutabl
         val postLocation = view.findViewById<TextView>(R.id.post_location_text)
         val postDate = view.findViewById<TextView>(R.id.post_calendar_text)
         val postItem = postList[position]
+        postImage.setImageResource(postItem.postImage)
         postTitle.text = postItem.postTitle
         postContent.text = postItem.postContent
         postLocation.text = postItem.postLocation
