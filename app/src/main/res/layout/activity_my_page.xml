@@ -79,431 +79,517 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ListView
-    android:id="@+id/postList"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/mypage_constraint_user"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:layout_marginTop="5dp" />
+<!--    <ListView-->
+<!--    android:id="@+id/postList"-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="0dp"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/mypage_constraint_user"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    android:layout_marginTop="5dp" />-->
 
 
-<!--    <ScrollView-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/mypage_constraint_user">-->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypage_constraint_user">
 
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/post_constraint1"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="20dp"-->
-<!--                app:layout_constraintBottom_toTopOf="@id/post_constraint2"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent">-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_constraint1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toTopOf="@id/post_constraint2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/post_image1"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="200dp"-->
-<!--                    android:background="@color/mainColor"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+                <ImageView
+                    android:id="@+id/post_image1"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/post_image1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/post_title1"-->
-<!--                    style="@style/text20.Bold"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="6dp"-->
-<!--                    android:layout_marginTop="6dp"-->
-<!--                    android:layout_marginEnd="6dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="1"-->
-<!--                    android:text="수원쪽에서 풋살 같이하실 두 분 구합니다~ "-->
-<!--                    android:textColor="@color/black"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_image1" />-->
+                <TextView
+                    android:id="@+id/post_title1"
+                    style="@style/text16.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/mypage_post1_title"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/post_image1" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/post_description1"-->
-<!--                    style="@style/text16"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="4dp"-->
-<!--                    android:layout_marginEnd="6dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="2"-->
-<!--                    android:text="실력에 상관없이 재밌고 매너있게 차실 분 구합니다~! 누구든지 연락주세요~"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="@id/post_title1"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_title1" />-->
+                <TextView
+                    android:id="@+id/post_description1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/mypage_post1_contents"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_title1"
+                    app:layout_constraintTop_toBottomOf="@id/post_title1" />
 
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/post_info1"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="4dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_description1">-->
+                <TextView
+                    android:id="@+id/txt_more1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_description1"
+                    app:layout_constraintTop_toBottomOf="@id/post_description1"/>
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/post_location1"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:src="@drawable/ic_location" />-->
+                <TextView
+                    android:id="@+id/txt_less1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="접기"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_description1"
+                    app:layout_constraintTop_toBottomOf="@id/post_description1"/>
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/post_location_text1"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="4"-->
-<!--                        android:ellipsize="end"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:text="수원역 1번출구" />-->
+                <LinearLayout
+                    android:id="@+id/post_info1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/post_description1">
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/post_calendar1"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:src="@drawable/ic_calendar" />-->
+                    <ImageView
+                        android:id="@+id/post_location1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_location" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/post_calendar_text1"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="4"-->
-<!--                        android:ellipsize="end"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:text="5일 오후 12시 ~ 오후 2시" />-->
+                    <TextView
+                        android:id="@+id/post_location_text1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/mypage_post1_location" />
 
-<!--                </LinearLayout>-->
+                    <ImageView
+                        android:id="@+id/post_calendar1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_calendar" />
 
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                    <TextView
+                        android:id="@+id/post_calendar_text1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/mypage_post1_date" />
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/post_constraint2"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="20dp"-->
-<!--                app:layout_constraintBottom_toTopOf="@id/post_constraint3"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/post_constraint1">-->
+                </LinearLayout>
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/post_image2"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="200dp"-->
-<!--                    android:background="@color/mainColor"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--                <TextView-->
-<!--                    android:id="@+id/post_title2"-->
-<!--                    style="@style/text20.Bold"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="6dp"-->
-<!--                    android:layout_marginTop="6dp"-->
-<!--                    android:layout_marginEnd="6dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="1"-->
-<!--                    android:text="알고리즘 기초부터 같이 공부 할 분들 찾습니다!!!"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_image2" />-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_constraint2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toTopOf="@id/post_constraint3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/post_constraint1">
 
-<!--                <TextView-->
-<!--                    android:id="@+id/post_description2"-->
-<!--                    style="@style/text16"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="4dp"-->
-<!--                    android:layout_marginEnd="6dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="2"-->
-<!--                    android:text="알고리즘 기초부터 탄탄히 다져나갈 분들 찾습니다!! 3명정도 구해보려고 합니다!-->
-<!--장소와 시간은 추후에 다 같이 결정할 생각입니다! 같이 끈기있게 공부하실 분든 연락주세요!!"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="@id/post_title2"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_title2" />-->
+                <ImageView
+                    android:id="@+id/post_image2"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/post_image2"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/post_info2"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="4dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_description2">-->
+                <TextView
+                    android:id="@+id/post_title2"
+                    style="@style/text16.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/mypage_post2_title"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/post_image2" />
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/post_location2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:src="@drawable/ic_location" />-->
+                <TextView
+                    android:id="@+id/post_description2"
+                    style="@style/text16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/mypage_post2_contents"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_title2"
+                    app:layout_constraintTop_toBottomOf="@id/post_title2" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/post_location_text2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="4"-->
-<!--                        android:ellipsize="end"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:text="미정" />-->
+                <TextView
+                    android:id="@+id/txt_more2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_description2"
+                    app:layout_constraintTop_toBottomOf="@id/post_description2"/>
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/post_calendar2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:src="@drawable/ic_calendar" />-->
+                <TextView
+                    android:id="@+id/txt_less2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="접기"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_description2"
+                    app:layout_constraintTop_toBottomOf="@id/post_description2"/>
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/post_calendar_text2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="4"-->
-<!--                        android:ellipsize="end"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:text="미정" />-->
+                <LinearLayout
+                    android:id="@+id/post_info2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/post_description2">
 
-<!--                </LinearLayout>-->
+                    <ImageView
+                        android:id="@+id/post_location2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_location" />
 
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                    <TextView
+                        android:id="@+id/post_location_text2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/mypage_post2_location" />
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/post_constraint3"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="20dp"-->
-<!--                app:layout_constraintBottom_toTopOf="@id/post_constraint4"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/post_constraint2">-->
+                    <ImageView
+                        android:id="@+id/post_calendar2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_calendar" />
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/post_image3"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="200dp"-->
-<!--                    android:background="@color/mainColor"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+                    <TextView
+                        android:id="@+id/post_calendar_text2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/mypage_post2_date" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/post_title3"-->
-<!--                    style="@style/text20.Bold"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="6dp"-->
-<!--                    android:layout_marginTop="6dp"-->
-<!--                    android:layout_marginEnd="6dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="1"-->
-<!--                    android:text="안드로이드 토이 프로젝트 같이 진행하실 서버분 구합니다!!"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_image3" />-->
+                </LinearLayout>
 
-<!--                <TextView-->
-<!--                    android:id="@+id/post_description3"-->
-<!--                    style="@style/text16"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="4dp"-->
-<!--                    android:layout_marginEnd="6dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="2"-->
-<!--                    android:text="안드로이드 토이 프로젝트를 아이디어부터 배포까지 같이 달려보실 서버분 구합니다!!"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="@id/post_title3"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_title3" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/post_info3"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="4dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_description3">-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_constraint3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toTopOf="@id/post_constraint4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/post_constraint2">
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/post_location3"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:src="@drawable/ic_location" />-->
+                <ImageView
+                    android:id="@+id/post_image3"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/post_image3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/post_location_text3"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="4"-->
-<!--                        android:ellipsize="end"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:text="온라인 회의" />-->
+                <TextView
+                    android:id="@+id/post_title3"
+                    style="@style/text16.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/mypage_post3_title"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/post_image3" />
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/post_calendar3"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:src="@drawable/ic_calendar" />-->
+                <TextView
+                    android:id="@+id/post_description3"
+                    style="@style/text16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/mypage_post3_contents"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_title3"
+                    app:layout_constraintTop_toBottomOf="@id/post_title3" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/post_calendar_text3"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="4"-->
-<!--                        android:ellipsize="end"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:text="미정" />-->
+                <TextView
+                    android:id="@+id/txt_more3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_description3"
+                    app:layout_constraintTop_toBottomOf="@id/post_description3"/>
 
-<!--                </LinearLayout>-->
+                <TextView
+                    android:id="@+id/txt_less3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="접기"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_description3"
+                    app:layout_constraintTop_toBottomOf="@id/post_description3"/>
 
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <LinearLayout
+                    android:id="@+id/post_info3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/post_description3">
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/post_constraint4"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="20dp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/post_constraint3">-->
+                    <ImageView
+                        android:id="@+id/post_location3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_location" />
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/post_image4"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="200dp"-->
-<!--                    android:background="@color/mainColor"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+                    <TextView
+                        android:id="@+id/post_location_text3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/mypage_post3_location" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/post_title4"-->
-<!--                    style="@style/text20.Bold"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="6dp"-->
-<!--                    android:layout_marginTop="6dp"-->
-<!--                    android:layout_marginEnd="6dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="1"-->
-<!--                    android:text="수원역에서 풋살 같이하실 분 구합니다~ "-->
-<!--                    android:textColor="@color/black"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_image4" />-->
+                    <ImageView
+                        android:id="@+id/post_calendar3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_calendar" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/post_description4"-->
-<!--                    style="@style/text16"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="4dp"-->
-<!--                    android:layout_marginEnd="6dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="2"-->
-<!--                    android:text="실력에 상관없이 재밌고 매너있게 차실 분 구합니다~! 누구든지 연락주세요~"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="@id/post_title4"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_title4" />-->
+                    <TextView
+                        android:id="@+id/post_calendar_text3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/mypage_post3_date" />
 
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/post_info4"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="4dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/post_description4">-->
+                </LinearLayout>
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/post_location4"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:src="@drawable/ic_location" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/post_location_text4"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="4"-->
-<!--                        android:ellipsize="end"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:text="수원역 1번출구" />-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_constraint4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/post_constraint3">
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/post_calendar4"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:src="@drawable/ic_calendar" />-->
+                <ImageView
+                    android:id="@+id/post_image4"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/post_image4"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/post_calendar_text4"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_weight="4"-->
-<!--                        android:ellipsize="end"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:text="22일 오후 6시 ~ 오후 8시" />-->
+                <TextView
+                    android:id="@+id/post_title4"
+                    style="@style/text16.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/mypage_post4_title"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/post_image4" />
 
-<!--                </LinearLayout>-->
+                <TextView
+                    android:id="@+id/post_description4"
+                    style="@style/text16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/mypage_post4_contents"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_title4"
+                    app:layout_constraintTop_toBottomOf="@id/post_title4" />
 
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <TextView
+                    android:id="@+id/txt_more4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_description4"
+                    app:layout_constraintTop_toBottomOf="@id/post_description4"/>
+
+                <TextView
+                    android:id="@+id/txt_less4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="접기"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/post_description4"
+                    app:layout_constraintTop_toBottomOf="@id/post_description4"/>
+
+                <LinearLayout
+                    android:id="@+id/post_info4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/post_description4">
+
+                    <ImageView
+                        android:id="@+id/post_location4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/post_location_text4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/mypage_post4_location" />
+
+                    <ImageView
+                        android:id="@+id/post_calendar4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_calendar" />
+
+                    <TextView
+                        android:id="@+id/post_calendar_text4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/mypage_post4_date" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--    </ScrollView>-->
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
