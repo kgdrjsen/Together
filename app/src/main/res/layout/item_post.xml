@@ -10,13 +10,14 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:background="@color/mainColor"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/post_title"
-        style="@style/text20.Bold"
+        style="@style/text16.Bold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
@@ -32,7 +33,6 @@
 
     <TextView
         android:id="@+id/post_description"
-        style="@style/text16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
