@@ -22,7 +22,7 @@ class DetailActivity : AppCompatActivity() {
         val img4 = findViewById<ImageView>(R.id.iv_image4)
 
         val textId = findViewById<TextView>(R.id.tv_userId)
-        val userInterest = findViewById<TextView>(R.id.tv_userInterest)
+        val userNickName = findViewById<TextView>(R.id.tv_userNickName)
         val userHobby = findViewById<TextView>(R.id.tv_userHobby)
 
         val date = findViewById<TextView>(R.id.tv_date)
@@ -43,7 +43,7 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.color.black)
                 img4.setOnClickListener { showDialogImage(R.color.black) }
                 textId.setText("${User.id}")
-                userInterest.setText("야구 좋아해요")
+                userNickName.setText("야구 좋아해요")
                 userHobby.setText("야구경기 관람 좋아해요 ")
                 date.setText("2023년12월 27일")
                 detail.setText("야구동아리야구좋아 입니다\n 날짜는 내일입니다 \n" +
@@ -62,7 +62,7 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.color.white)
                 img4.setOnClickListener { showDialogImage(R.color.white) }
                 textId.setText("가나다입니")
-                userInterest.setText("123")
+                userNickName.setText("123")
                 userHobby.setText("12345 ")
                 detail.setText("123456")
             }
@@ -79,7 +79,7 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.color.white)
                 img4.setOnClickListener { showDialogImage(R.color.white) }
                 textId.setText("text")
-                userInterest.setText("123")
+                userNickName.setText("123")
                 userHobby.setText("12345 ")
                 detail.setText("123456")
             }
@@ -96,7 +96,7 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.color.white)
                 img4.setOnClickListener { showDialogImage(R.color.white) }
                 textId.setText("text")
-                userInterest.setText("123")
+                userNickName.setText("123")
                 userHobby.setText("12345 ")
                 detail.setText("123456")
             }
@@ -113,7 +113,7 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.color.white)
                 img4.setOnClickListener { showDialogImage(R.color.white) }
                 textId.setText("text")
-                userInterest.setText("123")
+                userNickName.setText("123")
                 userHobby.setText("12345 ")
                 detail.setText("123456")
             }
@@ -130,7 +130,7 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.color.white)
                 img4.setOnClickListener { showDialogImage(R.color.white) }
                 textId.setText("text")
-                userInterest.setText("123")
+                userNickName.setText("123")
                 userHobby.setText("12345 ")
                 detail.setText("123456")
             }
@@ -147,7 +147,7 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.color.white)
                 img4.setOnClickListener { showDialogImage(R.color.white) }
                 textId.setText("text")
-                userInterest.setText("123")
+                userNickName.setText("123")
                 userHobby.setText("12345 ")
                 detail.setText("123456")
             }
@@ -164,7 +164,7 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.color.white)
                 img4.setOnClickListener { showDialogImage(R.color.white) }
                 textId.setText("text")
-                userInterest.setText("123")
+                userNickName.setText("123")
                 userHobby.setText("12345 ")
                 detail.setText("123456")
             }
@@ -234,6 +234,7 @@ class DetailActivity : AppCompatActivity() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.custom_dialog , null)
         val diaBuilder = AlertDialog.Builder(this).setView(dialogView)
         val dialog = diaBuilder.create()
+
             dialog.show()
 
         val diaImg = dialog.findViewById<ImageView>(R.id.iv_dialog)
