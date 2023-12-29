@@ -169,6 +169,17 @@
         app:layout_constraintTop_toBottomOf="@id/signup_pass" />
 
     <TextView
+        android:id="@+id/tv_pass_check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_et4" />
+
+    <TextView
         android:id="@+id/signup_passcheck"
         style="@style/text16.Bold"
         android:layout_width="wrap_content"
