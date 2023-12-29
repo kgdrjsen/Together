@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /build### AndroidStudio template
 # Covers files to be ignored for android development using Android Studio.
 
@@ -45,12 +46,39 @@ captures/
 *.ipr
 *~
 *.swp
+=======
+/build### Android template
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+>>>>>>> 126d2e08a65279e3c8df31f202feb95ca7f609b7
 
 # Keystore files
 *.jks
 *.keystore
 
 # Google Services (e.g. APIs or Firebase)
+<<<<<<< HEAD
 # google-services.json
 
 # Android Patch
@@ -125,6 +153,12 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+=======
+google-services.json
+
+# Android Profiling
+*.hprof
+>>>>>>> 126d2e08a65279e3c8df31f202feb95ca7f609b7
 
 ### Android template
 # Gradle files

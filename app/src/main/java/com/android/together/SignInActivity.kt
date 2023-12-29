@@ -92,7 +92,8 @@ class SignInActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java).apply {
                 putExtra(Contants.USER_ID, signin_et1.text.toString())
             }
-            startActivity(intent)
+            setResult(RESULT_OK,intent)
+            if(!isFinishing)finish()
             overridePendingTransition(R.anim.vertical_enter, R.anim.none)
         }
 
