@@ -14,7 +14,6 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-
         val Data = intent.getIntExtra(Contants.USER_IMAGE,0)
         val profileImage = findViewById<ImageView>(R.id.iv_profileImage)
         val img1 = findViewById<ImageView>(R.id.iv_image1)
@@ -236,6 +235,7 @@ class DetailActivity : AppCompatActivity() {
         val diaBuilder = AlertDialog.Builder(this) .setView(dialogView)
         val dialog = diaBuilder.create()
             dialog.show()
+
         val diaImg = dialog.findViewById<ImageView>(R.id.iv_dialog)
         diaImg?.setImageResource(resId)
 

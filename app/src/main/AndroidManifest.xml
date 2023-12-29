@@ -13,15 +13,13 @@
         android:theme="@style/Theme.Together"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".DetailActivity"
-=======
+            android:name=".DetailActivity"/>
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
->>>>>>> 986bfe18651266d8dbabdbd2411597a4dbacd510
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
