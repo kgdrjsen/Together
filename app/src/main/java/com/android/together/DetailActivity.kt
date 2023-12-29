@@ -233,7 +233,7 @@ class DetailActivity : AppCompatActivity() {
 
     fun showDialogImage (resId : Int){
         val dialogView = LayoutInflater.from(this).inflate(R.layout.custom_dialog , null)
-        val diaBuilder = AlertDialog.Builder(this) .setView(dialogView)
+        val diaBuilder = AlertDialog.Builder(this).setView(dialogView)
         val dialog = diaBuilder.create()
             dialog.show()
         val diaImg = dialog.findViewById<ImageView>(R.id.iv_dialog)
