@@ -14,8 +14,8 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        val inputData = intent.getStringExtra("data")
 
+        val Data = intent.getIntExtra(Contants.USER_IMAGE,0)
         val profileImage = findViewById<ImageView>(R.id.iv_profileImage)
         val img1 = findViewById<ImageView>(R.id.iv_image1)
         val img2 = findViewById<ImageView>(R.id.iv_image2)
@@ -30,9 +30,9 @@ class DetailActivity : AppCompatActivity() {
         val detail = findViewById<TextView>(R.id.tv_detail)
 
 
-        when(inputData){
+        when(Data){
 
-            "1" -> {
+            1 -> {
                 profileImage.setImageResource(R.color.mainColor)
                 profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
                 img1.setImageResource(R.color.black)
@@ -43,14 +43,117 @@ class DetailActivity : AppCompatActivity() {
                 img3.setOnClickListener { showDialogImage(R.color.black) }
                 img4.setImageResource(R.color.black)
                 img4.setOnClickListener { showDialogImage(R.color.black) }
+                textId.setText("${User.id}")
+                userInterest.setText("야구 좋아해요")
+                userHobby.setText("야구경기 관람 좋아해요 ")
+                date.setText("2023년12월 27일")
+                detail.setText("야구동아리야구좋아 입니다\n 날짜는 내일입니다 \n" +
+                        "시간은 조금이따가 입니다 \n 장소는 우리집앞입니다 \n 어떤어떤한 사람들 모십니다\n 연락주세요")
+            }
+
+            2 ->{
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
+                img1.setImageResource(R.color.white)
+                img1.setOnClickListener { showDialogImage(R.color.white) }
+                img2.setImageResource(R.color.mainColor)
+                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
+                img3.setImageResource(R.color.black)
+                img3.setOnClickListener { showDialogImage(R.color.black) }
+                img4.setImageResource(R.color.white)
+                img4.setOnClickListener { showDialogImage(R.color.white) }
+                textId.setText("가나다입니")
+                userInterest.setText("123")
+                userHobby.setText("12345 ")
+                detail.setText("123456")
+            }
+
+            3 -> {
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
+                img1.setImageResource(R.color.white)
+                img1.setOnClickListener { showDialogImage(R.color.white) }
+                img2.setImageResource(R.color.mainColor)
+                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
+                img3.setImageResource(R.color.black)
+                img3.setOnClickListener { showDialogImage(R.color.black) }
+                img4.setImageResource(R.color.white)
+                img4.setOnClickListener { showDialogImage(R.color.white) }
                 textId.setText("text")
                 userInterest.setText("123")
                 userHobby.setText("12345 ")
-                date.setText("2023년12월 27일")
-                detail.setText("123456\n 9999888888")
+                detail.setText("123456")
             }
 
-            "2" ->{
+          4 -> {
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
+                img1.setImageResource(R.color.white)
+                img1.setOnClickListener { showDialogImage(R.color.white) }
+                img2.setImageResource(R.color.mainColor)
+                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
+                img3.setImageResource(R.color.black)
+                img3.setOnClickListener { showDialogImage(R.color.black) }
+                img4.setImageResource(R.color.white)
+                img4.setOnClickListener { showDialogImage(R.color.white) }
+                textId.setText("text")
+                userInterest.setText("123")
+                userHobby.setText("12345 ")
+                detail.setText("123456")
+            }
+//----------------------------
+            5 ->{
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
+                img1.setImageResource(R.color.white)
+                img1.setOnClickListener { showDialogImage(R.color.white) }
+                img2.setImageResource(R.color.mainColor)
+                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
+                img3.setImageResource(R.color.black)
+                img3.setOnClickListener { showDialogImage(R.color.black) }
+                img4.setImageResource(R.color.white)
+                img4.setOnClickListener { showDialogImage(R.color.white) }
+                textId.setText("text")
+                userInterest.setText("123")
+                userHobby.setText("12345 ")
+                detail.setText("123456")
+            }
+
+            6 -> {
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
+                img1.setImageResource(R.color.white)
+                img1.setOnClickListener { showDialogImage(R.color.white) }
+                img2.setImageResource(R.color.mainColor)
+                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
+                img3.setImageResource(R.color.black)
+                img3.setOnClickListener { showDialogImage(R.color.black) }
+                img4.setImageResource(R.color.white)
+                img4.setOnClickListener { showDialogImage(R.color.white) }
+                textId.setText("text")
+                userInterest.setText("123")
+                userHobby.setText("12345 ")
+                detail.setText("123456")
+            }
+
+            7 -> {
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
+                img1.setImageResource(R.color.white)
+                img1.setOnClickListener { showDialogImage(R.color.white) }
+                img2.setImageResource(R.color.mainColor)
+                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
+                img3.setImageResource(R.color.black)
+                img3.setOnClickListener { showDialogImage(R.color.black) }
+                img4.setImageResource(R.color.white)
+                img4.setOnClickListener { showDialogImage(R.color.white) }
+                textId.setText("text")
+                userInterest.setText("123")
+                userHobby.setText("12345 ")
+                detail.setText("123456")
+            }
+
+            8 -> {
                 profileImage.setImageResource(R.color.mainColor)
                 profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
                 img1.setImageResource(R.color.white)
