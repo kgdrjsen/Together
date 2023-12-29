@@ -19,4 +19,8 @@
     <string name="nickname_condition">The nickname already exists</string>
     <string name="pass_same">"Your password matches "</string>
     <string name="pass_discord">Your Passwords do not match</string>
+    <string name="login_ok">" log-in succeed"</string>
+    <string name="id_pass_discord">There is no matching ID and password</string>
+
+
 </resources>

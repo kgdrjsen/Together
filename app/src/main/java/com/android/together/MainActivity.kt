@@ -83,8 +83,8 @@ class MainActivity : AppCompatActivity() {
                     mypage.visibility = View.VISIBLE
 
                     val userid = findViewById<TextView>(R.id.textView2)
-                    val userdata = intent.getStringExtra(Contants.USER_ID)
-                    userid.setText(userdata)
+                    val userdata = it.data?.getStringExtra(Contants.USER_ID)
+                    userid.setText("$userdata 님")
 
 //                  로그아웃 버튼을 누르면 초기화면으로
                     logout.setOnClickListener {
@@ -279,49 +279,49 @@ class MainActivity : AppCompatActivity() {
 
         content1.setOnClickListener {
             val intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra(Contants.USER_IMAGE,1)
+            intent.putExtra(Contants.POST_NUMBER,1)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }
         content2.setOnClickListener {
             val intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra(Contants.USER_IMAGE,2)
+            intent.putExtra(Contants.POST_NUMBER,2)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }
         content3.setOnClickListener {
             val intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra(Contants.USER_IMAGE,3)
+            intent.putExtra(Contants.POST_NUMBER,3)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }
         content4.setOnClickListener {
             val intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra(Contants.USER_IMAGE,4)
+            intent.putExtra(Contants.POST_NUMBER,4)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }
         content5.setOnClickListener {
             val intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra(Contants.USER_IMAGE,5)
+            intent.putExtra(Contants.POST_NUMBER,5)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }
         content6.setOnClickListener {
             val intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra(Contants.USER_IMAGE,6)
+            intent.putExtra(Contants.POST_NUMBER,6)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }
         content7.setOnClickListener {
             val intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra(Contants.USER_IMAGE,7)
+            intent.putExtra(Contants.POST_NUMBER,7)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }
         content8.setOnClickListener {
             val intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra(Contants.USER_IMAGE,8)
+            intent.putExtra(Contants.POST_NUMBER,8)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }

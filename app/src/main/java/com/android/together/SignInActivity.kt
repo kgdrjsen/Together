@@ -89,11 +89,18 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, getString(R.string.edit_hint),Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            if(signin_et1.text.toString() != User.id || signin_et2.text.toString() != User.password){
+                Toast.makeText(this,getString(R.string.id_pass_discord),Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
             val intent = Intent(this, MainActivity::class.java).apply {
                 putExtra(Contants.USER_ID, signin_et1.text.toString())
             }
+
+            Toast.makeText(this,getString(R.string.login_ok),Toast.LENGTH_SHORT).show()
             setResult(RESULT_OK,intent)
-            if (!isFinishing) finish()
+            if(!isFinishing)finish()
             overridePendingTransition(R.anim.vertical_enter, R.anim.none)
         }
 

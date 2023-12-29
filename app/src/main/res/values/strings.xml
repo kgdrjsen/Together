@@ -18,5 +18,40 @@
     <string name="nickname_condition">이미 있는 닉네임 입니다</string>
     <string name="pass_same">비밀번호가 일치합니다</string>
     <string name="pass_discord">비밀번호가 일치하지 않습니다</string>
+    <string name="login_ok">로그인 성공</string>
+    <string name="id_pass_discord">일치하는 아이디 및 비밀번호가 없습니다</string>
 
+    <string name="mypage_post1_title" translatable="false">수원쪽에서 풋살 같이하실 두 분 구합니다~</string>
+    <string name="mypage_post1_contents" translatable="false">잘하고 못하고에 상관없이 매너있고 재밌게 공 차실 분 아무나 상관 없습니다!! 누구든지 연락주세요! \n두분정도 구하고 있습니다!!</string>
+    <string name="mypage_post1_location" translatable="false"> 5일 오후 12시 ~ 오후 2시</string>
+    <string name="mypage_post1_date" translatable="false">수원역 1번 출구</string>
+    <string name="mypage_post2_title" translatable="false">알고리즘 기초부터 같이 공부 할 분들 찾습니다!!!</string>
+    <string name="mypage_post2_contents" translatable="false">알고리즘 기초부터 탄탄히 다져나갈 분들 찾습니다!! 3명정도 구해보려고 합니다!\n장소와 시간은 추후에 다 같이 결정할 생각입니다! 같이 끈기있게 공부하실 분든 연락주세요!!</string>
+    <string name="mypage_post2_location" translatable="false">미정</string>
+    <string name="mypage_post2_date" translatable="false">미정</string>
+    <string name="mypage_post3_title" translatable="false">안드로이드 토이 프로젝트 같이 진행하실 서버분 구합니다!!</string>
+    <string name="mypage_post3_contents" translatable="false">안드로이드 프로젝트의 아이디어부터 배포까지 함께 달려나가실 분 찾고있습니다!!\n일단 회의는 온라인 위주로 생각중입니다.  시간은 추후에 같이 정해볼 생각입니다.</string>
+    <string name="mypage_post3_location" translatable="false">온라인 회의</string>
+    <string name="mypage_post3_date" translatable="false">미정</string>
+    <string name="mypage_post4_title" translatable="false">수원역에 같이 풋살 하실 분 구합니다~</string>
+    <string name="mypage_post4_contents" translatable="false">잘하고 못하고에 상관없이 매너있고 재밌게 공 차실 분 아무나 상관 없습니다!! 누구든지 연락주세요! 두분정도 구하고 있습니다!!</string>
+    <string name="mypage_post4_location" translatable="false">수원역 1번 출구</string>
+    <string name="mypage_post4_date" translatable="false">22일 오후 6시 ~ 오후 8시</string>
+
+    <string name="main_post1_title" translatable="false">주말에 같이 풋살 하실 분들 모집합니다!</string>
+    <string name="main_post1_contents" translatable="false">주말동안 날씨도 좋고 연말 모임이 없는 한가한 분들 구합니다. \n연말을 뛰면서 재밌게 보내보아요. 단, 매너 있게 차실 분들만 연락 부탁드립니다!!</string>
+    <string name="main_post1_location" translatable="false">영등포역</string>
+    <string name="main_post1_date" translatable="false">30일 오후 2시 </string>
+    <string name="main_post2_title" translatable="false">국보로 승격한 죽서루 주변 환경 미화 알바 모집</string>
+    <string name="main_post2_contents" translatable="false">이번에 국보로 승격하여 강원도 관동팔경 중에서는 유일하게 국보로 등극하였고, \n강원도 13번째 국보가 되었습니다. 따라서 올해가 가기 전 새로운 마음으로 \n깨끗한 국보를 보고 싶으신 분들 많은 신청 부탁드립니다. \n 시급 : 12000원</string>
+    <string name="main_post2_location" translatable="false">죽서루 </string>
+    <string name="main_post2_date" translatable="false">시간 31일 오전 9시 ~ 오후 4시</string>
+    <string name="main_post3_title" translatable="false">주말에 같이 농구 하실 분들 모집합니다.</string>
+    <string name="main_post3_contents" translatable="false">현재 4명 있는데 3:3 반 코트나 5:5 풀 코트 하고 싶으셨지만 주변에서 \n사람을 구하기 어려워서 못 하셨던 초보,고수 분들 상관없이 자주 모여서 하실 분들이었으면 좋겠습니다.\n연말을 뛰면서 재밌게 보내보아요.</string>
+    <string name="main_post3_location" translatable="false">동탄 센트럴 파크</string>
+    <string name="main_post3_date" translatable="false">31일 오후 3시</string>
+    <string name="main_post4_title" translatable="false">사랑의 연탄 나르기 봉사 활동</string>
+    <string name="main_post4_contents" translatable="false">올해에도 돌아온 연탄 나르기 봉사 활동! \n저희 작은사랑과 함께 올해 한파를 힘겹게 이겨내고 계시는 분들께 \n뜨거운 사랑을 같이 나누어 주실 분들을 모집합니다.</string>
+    <string name="main_post4_location" translatable="false">추후에 공지</string>
+    <string name="main_post4_date" translatable="false">31일 오전 10시</string>
 </resources>
