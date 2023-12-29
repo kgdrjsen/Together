@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
 
 
         content1.setOnClickListener {
-            val intent = Intent(applicationContext,DetailPageActivity::class.java)
+            val intent = Intent(applicationContext,DetailActivity::class.java)
             intent.putExtra("id",0)
             //이미지를 비트맵으로 전환
             //바인딩을 쓰면
@@ -191,7 +191,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         content2.setOnClickListener {
-            val intent = Intent(applicationContext,DetailPageActivity::class.java)
+            val intent = Intent(applicationContext,DetailActivity::class.java)
             intent.putExtra("id",1)
             val sedBitmap = BitmapFactory.decodeResource(resources,R.drawable.logo)
             val stream = ByteArrayOutputStream()
@@ -202,7 +202,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         content3.setOnClickListener {
-            val intent = Intent(applicationContext,DetailPageActivity::class.java)
+            val intent = Intent(applicationContext,DetailActivity::class.java)
             intent.putExtra("id",2)
             val sedBitmap = BitmapFactory.decodeResource(resources,R.drawable.ic_lotto)
             val stream = ByteArrayOutputStream()
@@ -213,7 +213,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         content4.setOnClickListener {
-            val intent = Intent(applicationContext,DetailPageActivity::class.java)
+            val intent = Intent(applicationContext,DetailActivity::class.java)
             intent.putExtra("id",3)
             val sedBitmap = BitmapFactory.decodeResource(resources,R.drawable.ic_lotto)
             val stream = ByteArrayOutputStream()
@@ -224,7 +224,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         content5.setOnClickListener {
-            val intent = Intent(applicationContext,DetailPageActivity::class.java)
+            val intent = Intent(applicationContext,DetailActivity::class.java)
             intent.putExtra("id",4)
             val sedBitmap = BitmapFactory.decodeResource(resources,R.drawable.ic_lotto)
             val stream = ByteArrayOutputStream()
