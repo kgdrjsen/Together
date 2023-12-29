@@ -173,6 +173,7 @@ class DetailActivity : AppCompatActivity() {
         val btn_back = findViewById<Button>(R.id.btn_back)
         btn_back.setOnClickListener {
             finish()
+            overridePendingTransition(R.anim.none , R.anim.horizon_exit)
         }
 
 
