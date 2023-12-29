@@ -14,7 +14,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        val Data = intent.getIntExtra(Contants.POST_NUMBER,0)
+        val Data = intent.getIntExtra(Contants.POST_NUMBER,1)
 
         val profileImage = findViewById<ImageView>(R.id.iv_profileImage)
         val img1 = findViewById<ImageView>(R.id.iv_image1)
@@ -34,8 +34,30 @@ class DetailActivity : AppCompatActivity() {
 
         when(Data){
 
-            0 -> {
-                profileImage.setImageResource(R.drawable.basketball1).apply {  }
+            1 -> {
+
+                profileImage.setImageResource(R.drawable.basketball1)
+                profileImage.setOnClickListener{showDialogImage(R.drawable.basketball1)}
+                img1.setImageResource(R.drawable.futsal1)
+                img1.setOnClickListener { showDialogImage(R.drawable.futsal1) }
+                img2.setImageResource(R.drawable.futsal2)
+                img2.setOnClickListener { showDialogImage(R.drawable.futsal2) }
+                img3.setImageResource(R.drawable.futsal3)
+                img3.setOnClickListener { showDialogImage(R.drawable.futsal3) }
+                img4.setImageResource(R.drawable.futsal2)
+                img4.setOnClickListener { showDialogImage(R.drawable.futsal2) }
+                title.setText("${getString(R.string.mypage_post1_title)}")
+                textId.setText("아이디 : ${Contants.USER_ID}")
+                userNickName.setText("닉네임 : ${Contants.USER_NICKNAME} ")
+                postdate.setText("2023년12월 27일")
+                detail.setText("${getString(R.string.main_post1_contents)} ")
+                detailTime.setText("${getString(R.string.main_post1_date)}")
+                detailPlace.setText("${getString(R.string.main_post1_location)}")
+
+            }
+
+            2 -> {
+                profileImage.setImageResource(R.drawable.basketball1)
                 profileImage.setOnClickListener{showDialogImage(R.drawable.basketball1)}
                 img1.setImageResource(R.drawable.basketball2)
                 img1.setOnClickListener { showDialogImage(R.drawable.basketball2) }
@@ -55,23 +77,7 @@ class DetailActivity : AppCompatActivity() {
                 detailPlace.setText("농구장에서")
             }
 
-            1 ->{
-                profileImage.setImageResource(R.color.mainColor)
-                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
-                img1.setImageResource(R.color.white)
-                img1.setOnClickListener { showDialogImage(R.color.white) }
-                img2.setImageResource(R.color.mainColor)
-                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
-                img3.setImageResource(R.color.black)
-                img3.setOnClickListener { showDialogImage(R.color.black) }
-                img4.setImageResource(R.color.white)
-                img4.setOnClickListener { showDialogImage(R.color.white) }
-                textId.setText("가나다입니")
-                userNickName.setText("123")
-                detail.setText("123456")
-            }
-
-            2 -> {
+            3 -> {
                 profileImage.setImageResource(R.color.mainColor)
                 profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
                 img1.setImageResource(R.color.white)
@@ -87,7 +93,7 @@ class DetailActivity : AppCompatActivity() {
                 detail.setText("123456")
             }
 
-          3 -> {
+          4 -> {
                 profileImage.setImageResource(R.color.mainColor)
                 profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
                 img1.setImageResource(R.color.white)
@@ -103,23 +109,7 @@ class DetailActivity : AppCompatActivity() {
                 detail.setText("123456")
             }
 
-            4 ->{
-                profileImage.setImageResource(R.color.mainColor)
-                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
-                img1.setImageResource(R.color.white)
-                img1.setOnClickListener { showDialogImage(R.color.white) }
-                img2.setImageResource(R.color.mainColor)
-                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
-                img3.setImageResource(R.color.black)
-                img3.setOnClickListener { showDialogImage(R.color.black) }
-                img4.setImageResource(R.color.white)
-                img4.setOnClickListener { showDialogImage(R.color.white) }
-                textId.setText("text")
-                userNickName.setText("123")
-                detail.setText("123456")
-            }
-
-            5 -> {
+            5 ->{
                 profileImage.setImageResource(R.color.mainColor)
                 profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
                 img1.setImageResource(R.color.white)
@@ -152,6 +142,22 @@ class DetailActivity : AppCompatActivity() {
             }
 
             7 -> {
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
+                img1.setImageResource(R.color.white)
+                img1.setOnClickListener { showDialogImage(R.color.white) }
+                img2.setImageResource(R.color.mainColor)
+                img2.setOnClickListener { showDialogImage(R.color.mainColor) }
+                img3.setImageResource(R.color.black)
+                img3.setOnClickListener { showDialogImage(R.color.black) }
+                img4.setImageResource(R.color.white)
+                img4.setOnClickListener { showDialogImage(R.color.white) }
+                textId.setText("text")
+                userNickName.setText("123")
+                detail.setText("123456")
+            }
+
+            8 -> {
                 profileImage.setImageResource(R.color.mainColor)
                 profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
                 img1.setImageResource(R.color.white)
