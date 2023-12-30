@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         val login = findViewById<Button>(R.id.btn_login)
         val mypage = findViewById<Button>(R.id.btn_my_page)
         val logout = findViewById<Button>(R.id.btn_log_out)
-        val signup = findViewById<Button>(R.id.btn_sign_up)
 
         val content1 = findViewById<ConstraintLayout>(R.id.btn_content1)
         val content2 = findViewById<ConstraintLayout>(R.id.btn_content2)
@@ -70,14 +69,12 @@ class MainActivity : AppCompatActivity() {
 
 //                  SignIn을 통해 로그인 했으므로 로그인 버튼과 회원가입 버튼을 숨기고 로그아웃 버튼과 마이페이지 버튼을 나오게
                     login.visibility = View.INVISIBLE
-                    signup.visibility = View.INVISIBLE
                     logout.visibility = View.VISIBLE
                     mypage.visibility = View.VISIBLE
 
                     //투게더 자리에 유저 아이디 불러오기
                     val userid = findViewById<TextView>(R.id.textView2)
-                    val nickname = it.data?.getStringExtra(Contants.USER_NICKNAME)
-                    userid.setText("$nickname 님")
+                    userid.setText("${User.nickName} 님")
 
                     //intent를 써서 실패 했을 때 로그 찍어보기
 //                    val userdd = intent.getStringExtra(Contants.USER_ID)
@@ -88,19 +85,15 @@ class MainActivity : AppCompatActivity() {
                     val mytxt2 = findViewById<TextView>(R.id.txt_id4)
                     val mytxt3 = findViewById<TextView>(R.id.txt_id6)
                     val mytxt4 = findViewById<TextView>(R.id.txt_id8)
-                    mytxt1.setText(nickname)
-                    mytxt2.setText(nickname)
-                    mytxt3.setText(nickname)
-                    mytxt4.setText(nickname)
+                    mytxt1.setText(User.nickName)
+                    mytxt2.setText(User.nickName)
+                    mytxt3.setText(User.nickName)
+                    mytxt4.setText(User.nickName)
 
 //                  로그아웃 버튼을 누르면 초기화면으로
                     logout.setOnClickListener {
-                        //그냥 startActivity를 쓰면 뒤로 가기 눌렀을 때 다시 로그인 되어있던 상태로 돌아가기에
-                        //차라리 앱을 재시작하여 초기화
-                        finishAffinity()
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
-                        System.exit(0)
                         overridePendingTransition(R.anim.slide_left_enter, R.anim.none)
                     }
 //                  마이페이지로 화면 전환후 돌아올 때 초기화면으로 가지 않게(로그인을 다시 하지 않게) 여기도 setResult
@@ -117,12 +110,14 @@ class MainActivity : AppCompatActivity() {
         logout.visibility = View.INVISIBLE
         mypage.visibility = View.INVISIBLE
 
+        //로그인 액티비티에서 응답을 받게끔
         login.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             activityResultLauncher.launch(intent)
             overridePendingTransition(R.anim.slide_left_enter, R.anim.none)
         }
 
+        //내용
         val txt_contents1 = findViewById<TextView>(R.id.txt_content1)
         val txt_contents2 = findViewById<TextView>(R.id.txt_content2)
         val txt_contents3 = findViewById<TextView>(R.id.txt_content3)
@@ -131,7 +126,7 @@ class MainActivity : AppCompatActivity() {
         val txt_contents6 = findViewById<TextView>(R.id.txt_content6)
         val txt_contents7 = findViewById<TextView>(R.id.txt_content7)
         val txt_contents8 = findViewById<TextView>(R.id.txt_content8)
-
+        //더보기
         val more1 = findViewById<TextView>(R.id.txt_more1)
         val more2 = findViewById<TextView>(R.id.txt_more2)
         val more3 = findViewById<TextView>(R.id.txt_more3)
@@ -140,7 +135,7 @@ class MainActivity : AppCompatActivity() {
         val more6 = findViewById<TextView>(R.id.txt_more6)
         val more7 = findViewById<TextView>(R.id.txt_more7)
         val more8 = findViewById<TextView>(R.id.txt_more8)
-
+        //접기
         val less1 = findViewById<TextView>(R.id.txt_less1)
         val less2 = findViewById<TextView>(R.id.txt_less2)
         val less3 = findViewById<TextView>(R.id.txt_less3)
@@ -151,7 +146,7 @@ class MainActivity : AppCompatActivity() {
         val less8 = findViewById<TextView>(R.id.txt_less8)
 
 
-        //더보기, 접기 버튼
+        //더보기, 접기 버튼 눌렀을 때
         more1.setOnClickListener {
             setViewMoreAndLess(txt_contents1,more1,less1)
         }
@@ -250,17 +245,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.slide_left_enter,R.anim.none)
         }
-
-        //회원가입으로
-        signup.setOnClickListener {
-            val intent2 = Intent(this, SignUpActivity::class.java)
-            startActivity(intent2)
-            overridePendingTransition(R.anim.slide_right_enter, R.anim.none)
-
-
-        }
     }
-
 }
 
 
