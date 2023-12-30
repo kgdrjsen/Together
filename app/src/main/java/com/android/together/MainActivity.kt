@@ -253,7 +253,7 @@ class MainActivity : AppCompatActivity() {
         //회원가입으로
         signup.setOnClickListener {
             val intent2 = Intent(this, SignUpActivity::class.java)
-            activityResultLauncher.launch(intent2)
+            startActivity(intent2)
             overridePendingTransition(R.anim.slide_right_enter, R.anim.none)
 
 
