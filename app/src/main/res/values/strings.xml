@@ -54,4 +54,6 @@
     <string name="main_post4_contents" translatable="false">올해에도 돌아온 연탄 나르기 봉사 활동! \n저희 작은사랑과 함께 올해 한파를 힘겹게 이겨내고 계시는 분들께 \n뜨거운 사랑을 같이 나누어 주실 분들을 모집합니다.</string>
     <string name="main_post4_location" translatable="false">추후에 공지</string>
     <string name="main_post4_date" translatable="false">31일 오전 10시</string>
+
+    <string name="profile_not">프로필 이미지를 설정해주세요</string>
 </resources>
