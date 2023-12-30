@@ -55,16 +55,16 @@ class DetailActivity : AppCompatActivity() {
             }
 
             2 -> {
-                profileImage.setImageResource(R.drawable.basketball1)
-                profileImage.setOnClickListener{showDialogImage(R.drawable.basketball1)}
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
                 img1.setImageResource(R.drawable.post_image1)
                 img1.setOnClickListener { showDialogImage(R.drawable.post_image1) }
                 img2.setImageResource(R.drawable.post_image1_sub1)
                 img2.setOnClickListener { showDialogImage(R.drawable.post_image1_sub1) }
                 img3.setImageResource(R.drawable.post_image1_sub2)
                 img3.setOnClickListener { showDialogImage(R.drawable.post_image1_sub2) }
-                img4.setImageResource(R.drawable.post_image1)
-                img4.setOnClickListener { showDialogImage(R.drawable.post_image1) }
+                img4.setImageResource(R.drawable.post_image_sub3)
+                img4.setOnClickListener { showDialogImage(R.drawable.post_image_sub3) }
                 title.setText("${getString(R.string.mypage_post1_title)}")
                 textId.setText("아이디 : ${Contants.USER_ID}")
                 userNickName.setText("닉네임 : ${Contants.USER_NICKNAME} ")
@@ -98,16 +98,16 @@ class DetailActivity : AppCompatActivity() {
             }
 
           4 -> {
-            profileImage.setImageResource(R.drawable.basketball1)
-            profileImage.setOnClickListener{showDialogImage(R.drawable.basketball1)}
+            profileImage.setImageResource(R.color.mainColor)
+            profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
             img1.setImageResource(R.drawable.post_image2)
             img1.setOnClickListener { showDialogImage(R.drawable.post_image2) }
             img2.setImageResource(R.drawable.post_image2_sub1)
             img2.setOnClickListener { showDialogImage(R.drawable.post_image2_sub1) }
             img3.setImageResource(R.drawable.post_image2_sub2)
             img3.setOnClickListener { showDialogImage(R.drawable.post_image2_sub2) }
-            img4.setImageResource(R.drawable.post_image2_sub2)
-            img4.setOnClickListener { showDialogImage(R.drawable.post_image2_sub2) }
+            img4.setImageResource(R.drawable.post_image2_sub3)
+            img4.setOnClickListener { showDialogImage(R.drawable.post_image2_sub3) }
             title.setText("${getString(R.string.mypage_post2_title)}")
             textId.setText("아이디 : ${Contants.USER_ID}")
             userNickName.setText("닉네임 : ${Contants.USER_NICKNAME} ")
@@ -139,16 +139,16 @@ class DetailActivity : AppCompatActivity() {
             }
 
             6 -> {
-                profileImage.setImageResource(R.drawable.post_image3)
-                profileImage.setOnClickListener{showDialogImage(R.drawable.basketball1)}
+                profileImage.setImageResource(R.color.mainColor)
+                profileImage.setOnClickListener{showDialogImage(R.color.mainColor)}
                 img1.setImageResource(R.drawable.post_image3)
                 img1.setOnClickListener { showDialogImage(R.drawable.post_image3) }
-                img2.setImageResource(R.drawable.post_image3)
-                img2.setOnClickListener { showDialogImage(R.drawable.post_image3) }
-                img3.setImageResource(R.drawable.post_image3)
-                img3.setOnClickListener { showDialogImage(R.drawable.post_image3) }
-                img4.setImageResource(R.drawable.post_image3)
-                img4.setOnClickListener { showDialogImage(R.drawable.post_image3) }
+                img2.setImageResource(R.drawable.post_image3_sub1)
+                img2.setOnClickListener { showDialogImage(R.drawable.post_image3_sub1) }
+                img3.setImageResource(R.drawable.post_image3_sub2)
+                img3.setOnClickListener { showDialogImage(R.drawable.post_image3_sub2) }
+                img4.setImageResource(R.drawable.post_image3_sub3)
+                img4.setOnClickListener { showDialogImage(R.drawable.post_image3_sub3) }
                 title.setText("${getString(R.string.mypage_post3_title)}")
                 title.textSize = 16f
                 textId.setText("아이디 : ${Contants.USER_ID}")
@@ -185,12 +185,12 @@ class DetailActivity : AppCompatActivity() {
                 profileImage.setOnClickListener{showDialogImage(R.drawable.post_image4)}
                 img1.setImageResource(R.drawable.post_image4)
                 img1.setOnClickListener { showDialogImage(R.drawable.post_image4) }
-                img2.setImageResource(R.drawable.post_image4)
-                img2.setOnClickListener { showDialogImage(R.drawable.post_image4) }
-                img3.setImageResource(R.drawable.post_image4)
-                img3.setOnClickListener { showDialogImage(R.drawable.post_image4) }
-                img4.setImageResource(R.drawable.post_image4)
-                img4.setOnClickListener { showDialogImage(R.drawable.post_image4) }
+                img2.setImageResource(R.drawable.post_image1_sub2)
+                img2.setOnClickListener { showDialogImage(R.drawable.post_image1_sub2) }
+                img3.setImageResource(R.drawable.futsal5)
+                img3.setOnClickListener { showDialogImage(R.drawable.futsal5) }
+                img4.setImageResource(R.drawable.post_image1_sub1)
+                img4.setOnClickListener { showDialogImage(R.drawable.post_image1_sub1) }
                 title.setText("${getString(R.string.mypage_post4_title)}")
                 textId.setText("아이디 : ${Contants.USER_ID}")
                 userNickName.setText("닉네임 : ${Contants.USER_NICKNAME} ")
