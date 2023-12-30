@@ -174,10 +174,10 @@ class SignUpActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             // 회원가입시 프로필 사진 설정하지 않았다면 경고 메세지
-            if(signup_ig.drawable == null) {
-                Toast.makeText(this, getString(R.string.profile_not), Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
+//            if(signup_ig.drawable == null) {
+//                Toast.makeText(this, getString(R.string.profile_not), Toast.LENGTH_SHORT).show()
+//                return@setOnClickListener
+//            }
 
             // 액티비티 죽을때, SignInActivity에 아이디 비번 값 전달
             val intent = Intent(this, SignInActivity::class.java).apply {

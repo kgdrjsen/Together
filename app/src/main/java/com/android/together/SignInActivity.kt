@@ -99,7 +99,7 @@ class SignInActivity : AppCompatActivity() {
             }
 
             Toast.makeText(this,getString(R.string.login_ok),Toast.LENGTH_SHORT).show()
-            setResult(1,intent)
+            setResult(RESULT_OK,intent)
             if(!isFinishing)finish()
             overridePendingTransition(R.anim.vertical_enter, R.anim.none)
         }

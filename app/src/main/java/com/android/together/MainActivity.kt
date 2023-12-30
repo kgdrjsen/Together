@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
 
                     //투게더 자리에 유저 아이디 불러오기
                     val userid = findViewById<TextView>(R.id.textView2)
+//                    val nickname = it.data?.getStringExtra(U)
                     userid.setText("${User.nickName} 님")
 
                     //intent를 써서 실패 했을 때 로그 찍어보기
