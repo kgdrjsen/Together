@@ -91,10 +91,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tv_userNickName"
-            android:text=""
+            android:text="제목이 들어간다"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="65dp"
             android:textStyle="bold"
             android:textSize="18sp"/>
 
@@ -204,7 +204,7 @@
             android:singleLine="false"
             android:maxLines="10"
             app:layout_constraintTop_toBottomOf="@id/tv_date"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:lineSpacingExtra="5dp"
             android:layout_marginStart="15dp"
             android:text="상세한 내용"
@@ -217,7 +217,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_calender_white"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
@@ -240,9 +240,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_location_white"
-            android:layout_marginStart="140dp"
-            app:layout_constraintStart_toEndOf="@+id/iv_calanderImg"
-            app:layout_constraintTop_toTopOf="@+id/iv_calanderImg"
+            app:layout_constraintBottom_toTopOf="@+id/iv_calanderImg"
+            app:layout_constraintStart_toStartOf="@id/iv_calanderImg"
+            android:layout_marginBottom="5dp"
             />
 
         <TextView
