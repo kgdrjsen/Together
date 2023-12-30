@@ -66,8 +66,8 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.drawable.post_image_sub3)
                 img4.setOnClickListener { showDialogImage(R.drawable.post_image_sub3) }
                 title.setText("${getString(R.string.mypage_post1_title)}")
-                textId.setText("아이디 : ${Contants.USER_ID}")
-                userNickName.setText("닉네임 : ${Contants.USER_NICKNAME} ")
+                textId.setText("아이디 : ${User.id}")
+                userNickName.setText("닉네임 : ${User.nickName} ")
                 postdate.setText("2023년 12월 29일")
                 detail.setText("${getString(R.string.mypage_post1_contents)} ")
                 detailTime.setText("${getString(R.string.mypage_post1_location)}")
@@ -109,8 +109,8 @@ class DetailActivity : AppCompatActivity() {
             img4.setImageResource(R.drawable.post_image2_sub3)
             img4.setOnClickListener { showDialogImage(R.drawable.post_image2_sub3) }
             title.setText("${getString(R.string.mypage_post2_title)}")
-            textId.setText("아이디 : ${Contants.USER_ID}")
-            userNickName.setText("닉네임 : ${Contants.USER_NICKNAME} ")
+            textId.setText("아이디 : ${User.id}")
+            userNickName.setText("닉네임 : ${User.nickName} ")
             postdate.setText("2023년 12월 28일")
             detail.setText("${getString(R.string.mypage_post2_contents)} ")
             detailTime.setText("${getString(R.string.mypage_post2_date)}")
@@ -151,8 +151,8 @@ class DetailActivity : AppCompatActivity() {
                 img4.setOnClickListener { showDialogImage(R.drawable.post_image3_sub3) }
                 title.setText("${getString(R.string.mypage_post3_title)}")
                 title.textSize = 16f
-                textId.setText("아이디 : ${Contants.USER_ID}")
-                userNickName.setText("닉네임 : ${Contants.USER_NICKNAME} ")
+                textId.setText("아이디 : ${User.id}")
+                userNickName.setText("닉네임 : ${User.nickName} ")
                 postdate.setText("2023년12월 27일")
                 detail.setText("${getString(R.string.mypage_post3_contents)} ")
                 detailTime.setText("${getString(R.string.mypage_post3_date)}")
@@ -192,8 +192,8 @@ class DetailActivity : AppCompatActivity() {
                 img4.setImageResource(R.drawable.post_image1_sub1)
                 img4.setOnClickListener { showDialogImage(R.drawable.post_image1_sub1) }
                 title.setText("${getString(R.string.mypage_post4_title)}")
-                textId.setText("아이디 : ${Contants.USER_ID}")
-                userNickName.setText("닉네임 : ${Contants.USER_NICKNAME} ")
+                textId.setText("아이디 : ${User.id}")
+                userNickName.setText("닉네임 : ${User.nickName} ")
                 postdate.setText("2023년12월 21일")
                 detail.setText("${getString(R.string.mypage_post4_contents)} ")
                 detailTime.setText("${getString(R.string.mypage_post4_date)}")
