@@ -76,8 +76,8 @@ class MainActivity : AppCompatActivity() {
 
                     //투게더 자리에 유저 아이디 불러오기
                     val userid = findViewById<TextView>(R.id.textView2)
-//                    val nickname = it.data?.getStringExtra(U)
-                    userid.setText("${User.nickName} 님")
+                    val nickname = it.data?.getStringExtra(Contants.USER_NICKNAME)
+                    userid.setText("$nickname 님")
 
                     //intent를 써서 실패 했을 때 로그 찍어보기
 //                    val userdd = intent.getStringExtra(Contants.USER_ID)
@@ -88,10 +88,10 @@ class MainActivity : AppCompatActivity() {
                     val mytxt2 = findViewById<TextView>(R.id.txt_id4)
                     val mytxt3 = findViewById<TextView>(R.id.txt_id6)
                     val mytxt4 = findViewById<TextView>(R.id.txt_id8)
-                    mytxt1.setText(User.nickName)
-                    mytxt2.setText(User.nickName)
-                    mytxt3.setText(User.nickName)
-                    mytxt4.setText(User.nickName)
+                    mytxt1.setText(nickname)
+                    mytxt2.setText(nickname)
+                    mytxt3.setText(nickname)
+                    mytxt4.setText(nickname)
 
 //                  로그아웃 버튼을 누르면 초기화면으로
                     logout.setOnClickListener {
