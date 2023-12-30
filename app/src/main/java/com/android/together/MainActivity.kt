@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
+import org.w3c.dom.Text
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
@@ -75,8 +76,7 @@ class MainActivity : AppCompatActivity() {
 
                     //투게더 자리에 유저 아이디 불러오기
                     val userid = findViewById<TextView>(R.id.textView2)
-                    val userdata = it.data?.getStringExtra(Contants.USER_ID)
-                    userid.setText("$userdata 님")
+                    userid.setText("${User.nickName} 님")
 
                     //intent를 써서 실패 했을 때 로그 찍어보기
 //                    val userdd = intent.getStringExtra(Contants.USER_ID)
@@ -87,15 +87,19 @@ class MainActivity : AppCompatActivity() {
                     val mytxt2 = findViewById<TextView>(R.id.txt_id4)
                     val mytxt3 = findViewById<TextView>(R.id.txt_id6)
                     val mytxt4 = findViewById<TextView>(R.id.txt_id8)
-                    mytxt1.setText(userdata)
-                    mytxt2.setText(userdata)
-                    mytxt3.setText(userdata)
-                    mytxt4.setText(userdata)
+                    mytxt1.setText(User.nickName)
+                    mytxt2.setText(User.nickName)
+                    mytxt3.setText(User.nickName)
+                    mytxt4.setText(User.nickName)
 
 //                  로그아웃 버튼을 누르면 초기화면으로
                     logout.setOnClickListener {
-                        val intent4 = Intent(this, MainActivity::class.java)
-                        startActivity(intent4)
+                        //그냥 startActivity를 쓰면 뒤로 가기 눌렀을 때 다시 로그인 되어있던 상태로 돌아가기에
+                        //차라리 앱을 재시작하여 초기화
+                        finishAffinity()
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        System.exit(0)
                         overridePendingTransition(R.anim.slide_left_enter, R.anim.none)
                     }
 //                  마이페이지로 화면 전환후 돌아올 때 초기화면으로 가지 않게(로그인을 다시 하지 않게) 여기도 setResult
@@ -249,8 +253,10 @@ class MainActivity : AppCompatActivity() {
         //회원가입으로
         signup.setOnClickListener {
             val intent2 = Intent(this, SignUpActivity::class.java)
-            startActivity(intent2)
+            activityResultLauncher.launch(intent2)
             overridePendingTransition(R.anim.slide_right_enter, R.anim.none)
+
+
         }
     }
 

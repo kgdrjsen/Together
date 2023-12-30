@@ -180,10 +180,10 @@ class SignUpActivity : AppCompatActivity() {
             User.addUser("${signup_et1.text}","${signup_et2.text}","${signup_et3.text}","${signup_et4.text}",
                 "imageUri"
             )
-
             setResult(RESULT_OK,intent)
             finish()
             overridePendingTransition(R.anim.none, R.anim.horizon_exit)
+
         }
 
 
