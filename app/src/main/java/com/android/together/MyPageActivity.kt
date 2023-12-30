@@ -65,6 +65,19 @@ class MyPageActivity : AppCompatActivity() {
             lessText.setOnClickListener { setViewMoreAndLess(textView, moreText, lessText) }
         }
 
+        val postList = listOf(
+            R.id.post_constraint1, R.id.post_constraint2, R.id.post_constraint3, R.id.post_constraint4
+        )
+        postList.forEachIndexed { index, post ->
+            val post = findViewById<ConstraintLayout>(post)
+            val postValue = listOf(2,4,6,8)
+            post.setOnClickListener{
+                val intent = Intent(this@MyPageActivity, DetailActivity::class.java)
+                intent.putExtra(Contants.POST_NUMBER, postValue[index])
+                startActivity(intent)
+            }
+        }
+
     }
 
     private fun initEdit() {

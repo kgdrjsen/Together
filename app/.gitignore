@@ -160,6 +160,8 @@ google-services.json
 *.hprof
 >>>>>>> 126d2e08a65279e3c8df31f202feb95ca7f609b7
 
+<<<<<<< HEAD
+=======
 ### Android template
 # Gradle files
 .gradle/
@@ -195,6 +197,7 @@ google-services.json
 # Android Profiling
 *.hprof
 
+>>>>>>> 126d2e08a65279e3c8df31f202feb95ca7f609b7
 ### Android template
 # Gradle files
 .gradle/

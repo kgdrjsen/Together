@@ -3,6 +3,7 @@ package com.android.together
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -14,6 +15,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.android.together.User.id
 import com.android.together.User.name
 import com.android.together.User.nickName
@@ -21,7 +24,7 @@ import com.android.together.User.password
 
 class SignUpActivity : AppCompatActivity() {
 
-    var imageUri = ""
+    lateinit var imageUri : Uri
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +43,7 @@ class SignUpActivity : AppCompatActivity() {
         val btn_signup_check2 : Button = findViewById(R.id.btn_signup_check2)
         val btn_signup_back : Button = findViewById(R.id.btn_signup_back)
         val btn_signup2 : Button = findViewById(R.id.btn_signup2)
+        val signup_ig : ImageView = findViewById(R.id.signup_ig)
 
 
         // 뒤로가기 버튼
@@ -169,6 +173,11 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this, getString(R.string.edit_hint), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            // 회원가입시 프로필 사진 설정하지 않았다면 경고 메세지
+            if(signup_ig.drawable == null) {
+                Toast.makeText(this, getString(R.string.profile_not), Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             // 액티비티 죽을때, SignInActivity에 아이디 비번 값 전달
             val intent = Intent(this, SignInActivity::class.java).apply {
@@ -200,7 +209,7 @@ class SignUpActivity : AppCompatActivity() {
             if(it.resultCode == RESULT_OK) {
                 val signup_ig : ImageView = findViewById(R.id.signup_ig)
                 signup_ig.setImageURI(it.data?.data)
-                imageUri = it.data?.data.toString()
+                imageUri = it.data?.data!!
             }
         }
 
